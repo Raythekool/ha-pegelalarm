@@ -18,7 +18,7 @@ jobs:
       - name: Create ZIP for HACS
         run: |
           mkdir -p release/custom_components
-          cp -r custom_components/pegelalarm release/custom_components/
+          cp -r custom_components/pegelalarm-it release/custom_components/
           cd release
           zip -r ../pagelalarm-it.zip custom_components
           cd ..
