@@ -1,0 +1,38 @@
+name: Release to HACS
+
+permissions:
+  contents: write
+
+on:
+  push:
+    tags:
+      - "v*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create ZIP for HACS
+        run: |
+          mkdir -p release/custom_components
+          cp -r custom_components/pegelalarm release/custom_components/
+          cd release
+          zip -r ../pegelalarm.zip custom_components
+          cd ..
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: pegelalarm.zip
+          name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          body: |
+            Automated release for HACS deployment.
+            See changelog and documentation in the repository.
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,14 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Pegelalarm Sensor",
+        "description": "Enter the station ID (commonid) to monitor.",
+        "data": {
+          "station_id": "Station ID"
+        }
+      }
+    }
+  },
+  "title": "Pegelalarm"
+}

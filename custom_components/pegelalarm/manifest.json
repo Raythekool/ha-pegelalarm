@@ -1,0 +1,11 @@
+{
+  "domain": "pegelalarm",
+  "name": "Pegelalarm",
+  "version": "1.1.0",
+  "documentation": "https://github.com/Raythekool/ha-pegelalarm",
+  "issue_tracker": "https://github.com/Raythekool/ha-pegelalarm/issues",
+  "requirements": [],
+  "codeowners": ["@Raythekool"],
+  "iot_class": "cloud_polling",
+  "integration_type": "hub"
+}
