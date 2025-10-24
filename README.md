@@ -1,5 +1,9 @@
 # Home Assistant Pagelalarm-it Sensor
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Raythekool/ha-pegelalarm-it?label=release)
+![HACS Custom](https://img.shields.io/badge/HACS-Custom-blue.svg)
+![MIT License](https://img.shields.io/github/license/Raythekool/ha-pegelalarm-it)
+
 A custom Home Assistant integration to fetch river level data from [Pegelalarm](https://api.pegelalarm.at).
 The integration supports current level, historical data, trends, and additional metadata.
 
