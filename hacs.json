@@ -1,7 +1,8 @@
 {
   "name": "Pegelalarm",
-  "content_in_root": false,
   "render_readme": true,
-  "domains": ["sensor"],
-  "country": "IT"
+  "content_in_root": false,
+  "country": "IT",
+  "zip_release": true,
+  "filename": "pegelalarm.zip"
 }
