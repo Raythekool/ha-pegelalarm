@@ -1,6 +1,6 @@
-# Home Assistant Pegelalarm Sensor
+# Home Assistant Pagelalarm-it Sensor
 
-A custom Home Assistant integration to fetch river level data from [Pegelalarm](https://api.pegelalarm.at).  
+A custom Home Assistant integration to fetch river level data from [Pegelalarm](https://api.pegelalarm.at).
 The integration supports current level, historical data, trends, and additional metadata.
 
 ---
@@ -17,7 +17,7 @@ This integration can be installed via [HACS](https://hacs.xyz/) or manually:
 
 ### Manual
 
-1. Copy the contents of this repository to `config/custom_components/pegelalarm`.
+1. Copy the contents of this repository to `config/custom_components/pagelalarm-it`.
 2. Restart Home Assistant.
 
 ---
@@ -37,10 +37,10 @@ sensor:
 
 ### Available configuration options
 
-| Option          | Type   | Default  | Description                        |
-| --------------- | ------ | -------- | ---------------------------------- |
-| `station_id`    | string | required | Pegelalarm station ID (`commonid`) |
-| `scan_interval` | int    | 1800     | Update interval in seconds         |
+| Option          | Type   | Default  | Description                           |
+| --------------- | ------ | -------- | ------------------------------------- |
+| `station_id`    | string | required | Pagelalarm-it station ID (`commonid`) |
+| `scan_interval` | int    | 1800     | Update interval in seconds            |
 
 ---
 
@@ -102,11 +102,11 @@ show:
 hours_to_show: 48
 points_per_hour: 1
 
-- The integration automatically fetches current and historical data from Pegelalarm API.
+- The integration automatically fetches current and historical data from Pagelalarm-it API.
 ---
 
 ## 🛠 Development
-- Clone this repository into `custom_components/pegelalarm`.
+- Clone this repository into `custom_components/pagelalarm-it`.
 - Use a dev container or Home Assistant environment to test.
 - For contributions, follow [HACS dev guidelines](https://www.hacs.xyz/docs/contribute/devcontainer/).
 

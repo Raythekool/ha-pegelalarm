@@ -2,7 +2,7 @@ from homeassistant import config_entries
 import voluptuous as vol
 from .const import DOMAIN
 
-class PegelalarmFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
+class PagelalarmItFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1
 
     async def async_step_user(self, user_input=None):

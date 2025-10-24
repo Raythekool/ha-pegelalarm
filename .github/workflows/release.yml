@@ -20,13 +20,13 @@ jobs:
           mkdir -p release/custom_components
           cp -r custom_components/pegelalarm release/custom_components/
           cd release
-          zip -r ../pegelalarm.zip custom_components
+          zip -r ../pagelalarm-it.zip custom_components
           cd ..
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: pegelalarm.zip
+          files: pagelalarm-it.zip
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}
           body: |

@@ -13,15 +13,15 @@ SCAN_INTERVAL = timedelta(minutes=30)
 
 async def async_setup_entry(hass, entry, async_add_entities):
     station_id = entry.data["station_id"]
-    async_add_entities([PegelalarmSensor(hass, station_id)], True)
+    async_add_entities([PagelalarmItSensor(hass, station_id)], True)
 
-class PegelalarmSensor(SensorEntity):
-    """Sensore Pegelalarm dinamico."""
+class PagelalarmItSensor(SensorEntity):
+    """Sensore Pagelalarm-it dinamico."""
 
     def __init__(self, hass, station_id):
         self._station_id = station_id
-        self._attr_unique_id = f"pegelalarm_{station_id}"
-        self._attr_name = f"Pegelalarm {station_id}"
+        self._attr_unique_id = f"pagelalarm-it_{station_id}"
+        self._attr_name = f"Pagelalarm-it {station_id}"
         self._attr_native_unit_of_measurement = "cm"
         self._attr_icon = "mdi:waves"
         self._state = None
@@ -53,7 +53,7 @@ class PegelalarmSensor(SensorEntity):
             }
 
         except Exception as e:
-            _LOGGER.warning(f"Errore aggiornando Pegelalarm {self._station_id}: {e}")
+            _LOGGER.warning(f"Errore aggiornando Pagelalarm-it {self._station_id}: {e}")
             self._state = None
 
     @property
